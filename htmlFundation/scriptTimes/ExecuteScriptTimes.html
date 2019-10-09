@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>langfordli</title>
+	<meta charset = "UTF-8">
+	<script>
+		function show(){
+			alert("onload should run at last");
+		}
+		window.onload = show;
+	</script>
+
+	<script>
+		alert("this is Embedded Script which first create should be 1 run");
+	</script>
+
+	<script src = "DeferExecuteScript.js" defer>	
+	</script>
+</head>
+<body>
+	<script>
+		alert("this is Embedded Script which second create should be 2 run");
+	</script>
+	
+	<p>this is HTML Contents after all script show</p>
+
+	<script>
+		alert("this is Embedded Script which third create shoule be 3 run");	
+	</script>
+	
+</body>
+<!html>
