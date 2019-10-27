@@ -1,0 +1,68 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<title>langfordli</title>
+	<meta charset = "UTF-8">
+	<style>
+		a 
+		{
+			color : #FF0000;
+			background-color : #00FF00;
+		}
+		.class01
+		{
+			color : #000000;
+			background-color : #0000FF;
+		}
+		#id01
+		{	
+			color : #FF0000;
+		}
+		a[attribute01 = value01]
+		{
+			color : #FFFF00;
+		}
+		p>a
+		{
+			color : #FF0000;
+		}
+	</style>	
+	<script>
+		function change(){
+			var aNode = document.getElementById("a001");
+			aNode.attributes["attribute01"].value = "value01";
+		}
+	</script>
+</head>
+<body>
+	<p>
+		this is HTML contents
+		<br/>
+		<a href = "#">this is A contents</a>
+	</p>
+
+	<p class = "class01">this use class contents</p>
+	<br/>
+	<a href = "#" id = "id01">this use id contents</a>
+	<br/>
+	<a href = "#" attribute01 = "value01">this use attribute contents</a>
+	<br/>
+	<a href = "#" id = "a001" attribute01 = "value02">this use attribute contents</a>
+	<br/>
+	<button onclick = "change();">Change</button>
+	<p>
+		this is P contents
+		<br/>
+		<a href = "#"> this is A contents</a>
+	</p>
+	<br/>
+	<p>
+		this is P Contents
+		<br/>
+		<span>this is span contents
+			<br/>
+			<a href = "#"> this is A contents</a>
+		</span>
+	</p>
+</body>
+</html>
